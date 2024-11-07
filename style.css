@@ -1,0 +1,159 @@
+:root {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    gap: 4.8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 2.4rem;
+    max-width: 96.0rem;
+    padding: 2.4rem;
+    border-radius: 20px;
+    @media screen and (max-width: 768px) {
+        max-width: 37.5rem;
+        flex-direction: column;
+    }
+}
+input {
+    font-size: 2.4rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+}
+input:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.container0 {
+    max-width: 44.4rem;
+    padding: 1.2rem;
+    @media screen and (max-width: 768px) {
+        max-width: 32.7rem;
+    }
+}
+.container1, .container2 {
+    margin-bottom: 2.4rem;
+}
+.container2 {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .1fr 1fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "five ten fifteen"
+    "twentyfive fifty custom";
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "title title"
+        "five ten"
+        "fifteen twentyfive"
+        "fifty custom";
+        }
+}
+.container1, .container3 {
+    position: relative;
+}
+.container1 img, .container3 img {
+    position: absolute;
+    top: 3.8rem;
+    left: 2rem;
+    width: 1.2rem;
+}
+.bigInput {
+    width: 100%;
+    text-align: end;
+    padding-right: 2rem;
+}
+.bigInput::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+.smallInput {
+    text-align: end;
+}
+.smallInput::placeholder {
+    text-align: center;
+    color: hsl(186, 14%, 43%);
+}
+.smallInput:hover, .bigInput:hover {
+    cursor: pointer;
+}
+.smallInput, .smallBtn, .bigBtn {
+    width: 100%;
+}
+.smallBtn {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);;
+}
+.smallBtn:hover, .bigBtn:hover {
+    cursor: pointer;
+    background-color: hsl(186, 46%, 70%);
+}
+.smallBtn:hover {
+    color: hsl(0, 0%, 0%);
+}
+.container4 {
+    background-color: hsl(183, 100%, 15%);
+    max-width: 44.4rem;
+    padding: 3.6rem;
+    border-radius: 10px;
+    @media screen and (max-width: 768px) {
+        max-width: 32.7rem;
+    }
+}
+.container5, .container6 {
+    max-width: 37.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        max-width: 25.5rem;
+    }
+}
+.container5 {
+    margin-bottom: 3.6rem;
+}
+.container6 {
+    margin-bottom: 6em;
+}
+.big, .small {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 100;
+    display: block;
+}
+.big {
+    color: hsl(0, 0%, 100%);
+}
+.small {
+    color: hsl(184, 14%, 56%);
+}
+.result {
+    color: hsl(172, 67%, 45%);
+    font-size: 4.8rem;
+}
+.bigBtn {
+    color: hsl(186, 14%, 43%);
+}
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    color: hsl(12, 88%, 51%);
+}
+.attribution a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
