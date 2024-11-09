@@ -2,6 +2,7 @@ const bill = document.getElementById(`bill`)
 const customTip = document.getElementById(`custom`)
 const people = document.getElementById(`people`)
 const check = document.getElementById(`check`)
+const newElement = document.createElement(`p`)
 
 let billValue
 let customTipValue
@@ -26,14 +27,16 @@ customTip.addEventListener(`input`, (e) => {
 })
 people.addEventListener(`input`, (e) => {
     if(e.target.value == 0) {
-        const newElement = document.createElement(`p`)
         newElement.innerHTML = `Can't be zero`
         newElement.style.position = `absolute`
-        newElement.style.top = `.1rem`
+        newElement.style.top = `.8rem`
         newElement.style.right = `2rem`
         newElement.style.color = `hsl(0, 100%, 50%)`
         e.target.style.borderColor = `hsl(0, 100%, 50%)`
         check.appendChild(newElement)
+        if(document.body.style.width <= `768px`) {
+            newElement.style.fontSize = `1rem`
+        }
     }
     peopleValue = e.target.value
 })
@@ -66,12 +69,21 @@ const resetValues = (e) => {
         e.target.style.backgroundColor = `hsl(172, 67%, 45%)`
         billValue = ``; tipValue = ``; customTipValue = ``; peopleValue = ``
     }else{
+        const list = [1,2,3,4,5]
+        list.forEach((obj, index) => {
+            tip[index].style.backgroundColor = `hsl(183, 100%, 15%)`
+            tip[index].style.color = `hsl(0, 0%, 100%)`
+        })
+
+        if(people.value == 0) {
+            check.removeChild(newElement)
+        }
+        
         tipResult.innerHTML = `$0.00`
         totalResult.innerHTML = `$0.00`
         e.target.style.backgroundColor = `hsl(189, 41%, 97%)`
-        singleTip.style.backgroundColor = `hsl(183, 100%, 15%)`
-        singleTip.style.color = `hsl(0, 0%, 100%)`
-        bill.value = ``; customTip.value = ``; people.value = ``  
+        people.style.borderColor = `hsl(172, 67%, 45%)`
+        bill.value = ``; customTip.value = ``; people.value = ``
     }
 }
 reset.addEventListener(`click`, resetValues)
