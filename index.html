@@ -25,21 +25,21 @@
     <div class="container0">
       <div class="container1">
         <p>Bill</p>
-        <input type="text" class="bigInput" id="bill" placeholder="0">
+        <input type="text" class="bigInput input" id="bill" placeholder="0" value="">
         <img src="images/icon-dollar.svg" alt="">
       </div>
       <div class="container2">
         <p style="grid-area: title;">Select Tip %</p>
-        <input type="button" value="5%" class="smallBtn" id="five"  style="grid-area: five;">
-        <input type="button" value="10%" class="smallBtn" id="ten" style="grid-area: ten;">
-        <input type="button" value="15%" class="smallBtn" id="fifteen" style="grid-area: fifteen;">
-        <input type="button" value="25%" class="smallBtn" id="twentyfive" style="grid-area: twentyfive;">
-        <input type="button" value="50%" class="smallBtn" id="fifty" style="grid-area: fifty;">
-        <input type="text" class="smallInput" id="custom" placeholder="Custom" style="grid-area: custom;">
+        <button class="smallBtn" id="five"  style="grid-area: five;" value="5">5%</button>
+        <button class="smallBtn" id="ten" style="grid-area: ten;" value="10">10%</button>
+        <button class="smallBtn" id="fifteen" style="grid-area: fifteen;" value="15">15%</button>
+        <button class="smallBtn" id="twentyfive" style="grid-area: twentyfive;" value="25">25%</button>
+        <button class="smallBtn" id="fifty" style="grid-area: fifty;" value="50">50%</button>
+        <input type="text" class="smallInput input" id="custom" placeholder="Custom" style="grid-area: custom;">
       </div>
-      <div class="container3">
+      <div class="container3" id="check">
         <p>Number of People</p>
-        <input type="text" class="bigInput" id="people" placeholder="0">
+        <input type="text" class="bigInput input" id="people" placeholder="0">
         <img src="images/icon-person.svg" alt="">
       </div>
     </div>
@@ -49,16 +49,16 @@
           <p class="big">Tip Amount</p>
           <small class="small">/ person</small>
         </div>
-        <div class="result" id="">$0.00</div>
+        <div class="result" id="tipResult"></div>
       </div>
       <div class="container6">
         <div>
           <p class="big">Total</p>
           <small class="small">/ person</small>
         </div>
-        <div class="result" id="">$0.00</div>
+        <div class="result" id="totalResult"></div>
       </div>
-      <input type="button" value="RESET" class="bigBtn" id="reset">
+      <button class="bigBtn" id="reset">RESET</button>
     </div>
   </main>
   
